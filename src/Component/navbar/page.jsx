@@ -55,7 +55,7 @@ const NavbarPage = () => {
           <li>
             <Link
               href="/"
-              className={`btn btn-ghost text-md ${pathname == "/" && " bg-green-500 text-white font-bold"}`}
+              className={`btn btn-ghost text-md ${pathname == "/" && " bg-[#244D3F]  text-white font-bold"}`}
             >
               Home
             </Link>
@@ -63,7 +63,7 @@ const NavbarPage = () => {
           <li>
             <Link
               href="/timeline"
-              className={`btn btn-ghost text-md ${pathname == "/timeline" && " bg-green-500 text-white font-bold"}`}
+              className={`btn btn-ghost text-md ${pathname == "/timeline" && " bg-[#244D3F] text-white font-bold"}`}
             >
               Timeline
             </Link>
@@ -71,7 +71,7 @@ const NavbarPage = () => {
           <li>
             <Link
               href="/stats"
-              className={`btn btn-ghost text-md ${pathname == "/stats" && " bg-green-500 text-white font-bold"}`}
+              className={`btn btn-ghost text-md ${pathname == "/stats" && " bg-[#244D3F]  text-white font-bold"}`}
             >
               Stats
             </Link>
