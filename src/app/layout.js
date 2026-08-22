@@ -3,15 +3,10 @@ import "./globals.css";
 import NavbarPage from "@/Component/navbar/page";
 import FooterPage from "@/Component/Footer/page";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+ 
+const geist = Geist({
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: "KeenKeeper",
@@ -23,9 +18,9 @@ export default function RootLayout({ children }) {
     <html
       data-theme="corporate"
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={ `${geist.className} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col ">
+      <body className="min-h-full flex flex-col">
         <NavbarPage />
         {children}
         <FooterPage />
