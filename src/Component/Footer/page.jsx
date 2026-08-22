@@ -26,9 +26,13 @@ const FooterPage = () => {
           <Image src={twitter} alt="Twitter Logo" width={40} height={40} />
         </div>
       </nav>
-      <div className="w-full flex flex-col md:flex-row items-center justify-between">
-        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
-        <p>Ok</p>
+      <div className="w-full flex flex-col md:flex-row items-center justify-between ">
+        <p className="opacity-70">© {new Date().getFullYear()} - All right reserved</p>
+        <div className="flex gap-4 justify-center items-center">
+        <p className="opacity-70">Privacy Policy </p>
+        <p className="opacity-70">Terms of Service</p>
+        <p className="opacity-70">Cookies</p>
+        </div>
       </div>
     </footer>
   );
