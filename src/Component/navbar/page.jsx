@@ -61,7 +61,7 @@ const NavbarPage = () => {
             </li>
           </ul>
         </div>
-        <Link href="/" className="btn btn-ghost text-xl">
+        <Link href="/">
           <div className="">
             <Image
             src={logo}
