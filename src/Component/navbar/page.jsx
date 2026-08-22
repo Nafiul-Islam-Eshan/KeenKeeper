@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+import logo from "@/assets/logo.png"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -45,7 +47,14 @@ const NavbarPage = () => {
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost text-xl">
-          KeenKeeper
+          <div className="">
+            <Image
+            src={logo}
+            alt="Logo of KeenKeeper"
+            width={150}
+            height={150}
+          />
+          </div>
         </Link>
       </div>
 
