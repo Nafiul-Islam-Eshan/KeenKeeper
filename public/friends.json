@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Alex Rivera",
-    "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
     "email": "alex.rivera@example.com",
     "days_since_contact": 21,
     "status": "overdue",
@@ -14,7 +14,7 @@
   {
     "id": 2,
     "name": "Sarah Chen",
-    "picture": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1517841905240-472988babdf9",
     "email": "sarah.chen@example.com",
     "days_since_contact": 6,
     "status": "almost due",
@@ -26,7 +26,7 @@
   {
     "id": 3,
     "name": "Marcus Vance",
-    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
     "email": "marcus.vance@example.com",
     "days_since_contact": 3,
     "status": "on-track",
@@ -38,7 +38,7 @@
   {
     "id": 4,
     "name": "Priya Sharma",
-    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
     "email": "priya.sharma@example.com",
     "days_since_contact": 45,
     "status": "overdue",
@@ -50,7 +50,7 @@
   {
     "id": 5,
     "name": "David Miller",
-    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
     "email": "david.m@example.com",
     "days_since_contact": 13,
     "status": "almost due",
@@ -62,7 +62,7 @@
   {
     "id": 6,
     "name": "Elena Rostova",
-    "picture": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1",
     "email": "elena.r@example.com",
     "days_since_contact": 2,
     "status": "on-track",
@@ -74,7 +74,7 @@
   {
     "id": 7,
     "name": "Tariq Ahmed",
-    "picture": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61",
     "email": "tariq.ahmed@example.com",
     "days_since_contact": 60,
     "status": "overdue",
@@ -86,7 +86,7 @@
   {
     "id": 8,
     "name": "Maya Lin",
-    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1544005313-94ddf0286df2",
     "email": "maya.lin@example.com",
     "days_since_contact": 27,
     "status": "almost due",
@@ -98,7 +98,7 @@
   {
     "id": 9,
     "name": "Liam O'Connor",
-    "picture": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
     "email": "liam.oc@example.com",
     "days_since_contact": 5,
     "status": "on-track",
@@ -110,7 +110,7 @@
   {
     "id": 10,
     "name": "Sophia Martinez",
-    "picture": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04",
     "email": "sophia.m@example.com",
     "days_since_contact": 90,
     "status": "overdue",
@@ -122,7 +122,7 @@
   {
     "id": 11,
     "name": "James Wilson",
-    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d",
     "email": "james.wilson@example.com",
     "days_since_contact": 13,
     "status": "almost due",
@@ -134,7 +134,7 @@
   {
     "id": 12,
     "name": "Amina Khan",
-    "picture": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
+    "picture": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
     "email": "amina.khan@example.com",
     "days_since_contact": 10,
     "status": "on-track",

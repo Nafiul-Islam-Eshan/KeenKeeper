@@ -1,11 +1,9 @@
-import friends from "../../../public/friends.json"
+import Image from "next/image";
+import friends from "../../../public/friends.json";
 
 const HomePage = () => {
-  const{} = friends
-  console.table(friends);
   return (
     <div>
-
       {/* banner section */}
       <div className="flex flex-col py-5 gap-5">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
@@ -67,7 +65,51 @@ const HomePage = () => {
 
       <div className="divider"></div>
 
+      {/* Friends cards */}
+      <div className="mb-20">
+        <h2 className="text-2xl font-bold mb-4">Your Friends</h2>
 
+        {friends.map((friend) => {
+          const { id, name, picture, days_since_contact, status, tags } =
+            friend;
+
+          return (
+              <div key={id} className="flex min-h-screen items-center justify-center">
+                <div className="w-64 rounded-lg border-2 border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800">
+                  <figure className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-500 dark:bg-indigo-600">
+                    <Image
+                      src = {picture}
+                      alt = {`Image of ${name}`}
+                      width={150}
+                      height={150}
+                    />
+                  </figure>
+                  <h2 className="mt-4 text-xl font-bold text-indigo-600 dark:text-indigo-400">
+                    John Doe
+                  </h2>
+                  <p className="mb-4 text-gray-600 dark:text-gray-300">
+                    Web Developer
+                  </p>
+                  <div className="flex items-center justify-center">
+                    <a
+                      href="#"
+                      className="rounded-full bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 dark:bg-indigo-400 dark:hover:bg-indigo-500"
+                    >
+                      Contact
+                    </a>
+                    <a
+                      href="#"
+                      className="ml-4 rounded-full bg-gray-300 px-4 py-2 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600"
+                    >
+                      Portfolio
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+          );
+        })}
+      </div>
     </div>
   );
 };
