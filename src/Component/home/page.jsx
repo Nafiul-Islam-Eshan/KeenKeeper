@@ -1,9 +1,13 @@
-
+import friends from "../../../public/friends.json"
 
 const HomePage = () => {
+  const{} = friends
+  console.table(friends);
   return (
     <div>
-      <div className="flex flex-col p-5 gap-5">
+
+      {/* banner section */}
+      <div className="flex flex-col py-5 gap-5">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           Friends to keep close in your life
         </h1>
@@ -60,6 +64,10 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+
+      <div className="divider"></div>
+
+
     </div>
   );
 };
