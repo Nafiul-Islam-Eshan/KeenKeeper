@@ -1,11 +1,37 @@
-import React from 'react';
+import Image from "next/image";
+import { logoxl, insta, fb, twitter } from "@/assets";
+import React from "react";
 
 const FooterPage = () => {
-    return (
-        <footer className='bg-[#244D3F] text-4xl font-serif text-violet-700 font-extrabold' >
-            It is footer page
-        </footer>
-    );
+  return (
+    <footer className="footer footer-horizontal footer-center bg-[#244D3F] text-primary-content p-10 lg:px-[245] md:px-[150] ">
+      <aside>
+        <Image src={logoxl} alt="KeenKeeper Logo" width={300} height={300} />
+        <p className="">
+          Your personal shelf of meaningful connections. Browse, tend, and
+          nurture the relationships that matter most.
+        </p>
+        
+      </aside>
+      <nav>
+        <h3 className="text-lg pb-4">Social Links</h3>
+        <div className="grid grid-flow-col gap-4">
+          {/* Insta */}
+          <Image src={insta} alt="Instagrame Logo" width={40} height={40} />
+
+          {/* Fb */}
+          <Image src={fb} alt="Facebook Logo" width={40} height={40} />
+
+          {/* Twitter */}
+          <Image src={twitter} alt="Twitter Logo" width={40} height={40} />
+        </div>
+      </nav>
+      <div className="w-full flex flex-col md:flex-row items-center justify-between">
+        <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+        <p>Ok</p>
+      </div>
+    </footer>
+  );
 };
 
 export default FooterPage;

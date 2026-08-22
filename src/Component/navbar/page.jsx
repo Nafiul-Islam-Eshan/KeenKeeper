@@ -36,13 +36,28 @@ const NavbarPage = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <Link href="/">Home</Link>
+              <Link
+              href="/"
+              className={`btn btn-ghost text-md ${pathname == "/" && " bg-[#244D3F]  text-white font-bold"}`}
+            >
+              Home
+            </Link>
             </li>
             <li>
-              <Link href="/">Timeline</Link>
+              <Link
+              href="/timeline"
+              className={`btn btn-ghost text-md ${pathname == "/timeline" && " bg-[#244D3F]  text-white font-bold"}`}
+            >
+              Timeline
+            </Link>
             </li>
             <li>
-              <Link href="/">Stats</Link>
+              <Link
+              href="/stats"
+              className={`btn btn-ghost text-md ${pathname == "/stats" && " bg-[#244D3F]  text-white font-bold"}`}
+            >
+              Stats
+            </Link>
             </li>
           </ul>
         </div>
