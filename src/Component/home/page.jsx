@@ -69,46 +69,60 @@ const HomePage = () => {
       <div className="mb-20">
         <h2 className="text-2xl font-bold mb-4">Your Friends</h2>
 
-        {friends.map((friend) => {
-          const { id, name, picture, days_since_contact, status, tags } =
-            friend;
+        {/* For each friend card */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {friends.map((friend) => {
+            const {
+              id,
+              name,
+              picture,
+              days_since_contact: days_ago,
+              status,
+              tags,
+            } = friend;
 
-          return (
-              <div key={id} className="flex min-h-screen items-center justify-center">
-                <div className="w-64 rounded-lg border-2 border-indigo-500 bg-transparent p-4 text-center shadow-lg dark:bg-gray-800">
-                  <figure className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-indigo-500 dark:bg-indigo-600">
+            return (
+              <div key={id} className="items-center justify-center">
+                <div className="rounded-lg w-full h-full bg-base-100 shadow-lg p-4 text-center border-2 border-[#E8E8E8]">
+                  {/* Picture */}
+                  <div className="relative mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full">
                     <Image
-                      src = {picture}
-                      alt = {`Image of ${name}`}
-                      width={150}
-                      height={150}
+                      src={picture}
+                      alt={`Image of ${name}`}
+                      fill
+                      className="object-cover"
                     />
-                  </figure>
-                  <h2 className="mt-4 text-xl font-bold text-indigo-600 dark:text-indigo-400">
-                    John Doe
-                  </h2>
-                  <p className="mb-4 text-gray-600 dark:text-gray-300">
-                    Web Developer
-                  </p>
-                  <div className="flex items-center justify-center">
-                    <a
-                      href="#"
-                      className="rounded-full bg-indigo-600 px-4 py-2 text-white hover:bg-indigo-700 dark:bg-indigo-400 dark:hover:bg-indigo-500"
-                    >
-                      Contact
-                    </a>
-                    <a
-                      href="#"
-                      className="ml-4 rounded-full bg-gray-300 px-4 py-2 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600"
-                    >
-                      Portfolio
-                    </a>
+                  </div>
+
+                  {/* Name */}
+                  <h2 className="mt-4 text-xl font-bold">{name}</h2>
+
+                  {/* Days since contact */}
+                  <p className="mb-4 text-gray-500">{`${days_ago}d ago`}</p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap items-center justify-center gap-1.5">
+                    {tags.map((tag, i) => (
+                      <div
+                        key={i}
+                        className="badge bg-[#CBFADB] text-[#244D3F] rounded-4xl truncate uppercase"
+                      >
+                        {tag}
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Status */}
+                  <div
+                    className={`my-2 text-white badge rounded-4xl capitalize ${status === "almost due" ? `bg-[#EFAD44] ` : status === "overdue" ? `bg-[#EF4444] ` : `bg-[#244D3F] `}`}
+                  >
+                    {status.replace("-", " ")}
                   </div>
                 </div>
               </div>
-
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
