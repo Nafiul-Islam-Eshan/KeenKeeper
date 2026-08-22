@@ -1,10 +1,10 @@
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center">
-      <div className='text-4xl text-violet-700 mx-auto my-auto font-extrabold'>
-            It is Home page
-        </div>
-    </div>
+    <main className="flex flex-col flex-1 items-center justify-center lg:px-[245] md:px-[150]">
+
+      <div>
+        <h1 className="text-3xl font-bold text-center">Friends to keep close in your life</h1>
+      </div>      
+    </main>
   );
 }

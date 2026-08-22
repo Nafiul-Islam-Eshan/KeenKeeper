@@ -1,17 +1,20 @@
 "use client";
 import Image from "next/image";
-import logo from "@/assets/logo.png"
+import logo from "@/assets/logo.png";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import { RiHome2Line, RiTimeLine } from "react-icons/ri";
+import { BsGraphUp } from "react-icons/bs";
 
 const NavbarPage = () => {
   const pathname = usePathname();
 
   return (
     <div className="navbar bg-base-100 shadow-sm lg:px-20">
+
       {/* navbar start */}
       <div className="navbar-start">
+
         {/* Dropdown button */}
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost md:hidden">
@@ -31,44 +34,51 @@ const NavbarPage = () => {
               />{" "}
             </svg>
           </div>
+
           <ul
             tabIndex={-1}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
+            {/* Home */}
             <li>
               <Link
-              href="/"
-              className={`btn btn-ghost text-md ${pathname == "/" && " bg-[#244D3F]  text-white font-bold"}`}
-            >
-              Home
-            </Link>
+                href="/"
+                className={`btn btn-ghost text-md ${pathname == "/" && " bg-[#244D3F]  text-white font-bold"}`}
+              >
+                <RiHome2Line /> Home
+              </Link>
             </li>
+
+            {/* Timeline */}
             <li>
               <Link
-              href="/timeline"
-              className={`btn btn-ghost text-md ${pathname == "/timeline" && " bg-[#244D3F]  text-white font-bold"}`}
-            >
-              Timeline
-            </Link>
+                href="/timeline"
+                className={`btn btn-ghost text-md ${pathname == "/timeline" && " bg-[#244D3F]  text-white font-bold"}`}
+              >
+                <RiTimeLine /> Timeline
+              </Link>
             </li>
+
+            {/* Stats */}
             <li>
               <Link
-              href="/stats"
-              className={`btn btn-ghost text-md ${pathname == "/stats" && " bg-[#244D3F]  text-white font-bold"}`}
-            >
-              Stats
-            </Link>
+                href="/stats"
+                className={`btn btn-ghost text-md ${pathname == "/stats" && " bg-[#244D3F]  text-white font-bold"}`}
+              >
+                <BsGraphUp /> Stats
+              </Link>
             </li>
           </ul>
+          
         </div>
         <Link href="/">
           <div className="">
             <Image
-            src={logo}
-            alt="Logo of KeenKeeper"
-            width={150}
-            height={150}
-          />
+              src={logo}
+              alt="Logo of KeenKeeper"
+              width={150}
+              height={150}
+            />
           </div>
         </Link>
       </div>
@@ -76,30 +86,37 @@ const NavbarPage = () => {
       {/* Navbar End */}
       <div className="navbar-end hidden md:flex">
         <ul className="menu menu-horizontal px-1">
+
+          {/* Home */}
           <li>
             <Link
               href="/"
               className={`btn btn-ghost text-md ${pathname == "/" && " bg-[#244D3F]  text-white font-bold"}`}
             >
-              Home
+              <RiHome2Line /> Home
             </Link>
           </li>
+
+          {/* Timeline */}
           <li>
             <Link
               href="/timeline"
               className={`btn btn-ghost text-md ${pathname == "/timeline" && " bg-[#244D3F] text-white font-bold"}`}
             >
-              Timeline
+              <RiTimeLine /> Timeline
             </Link>
           </li>
+
+          {/* Stats */}
           <li>
             <Link
               href="/stats"
               className={`btn btn-ghost text-md ${pathname == "/stats" && " bg-[#244D3F]  text-white font-bold"}`}
             >
-              Stats
+              <BsGraphUp /> Stats
             </Link>
           </li>
+
         </ul>
       </div>
     </div>
