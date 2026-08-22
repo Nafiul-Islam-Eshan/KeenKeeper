@@ -7,7 +7,7 @@ const NavbarPage = () => {
   const pathname = usePathname();
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm lg:px-20">
       {/* navbar start */}
       <div className="navbar-start">
         {/* Dropdown button */}
