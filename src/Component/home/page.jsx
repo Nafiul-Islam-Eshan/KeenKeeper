@@ -1,4 +1,3 @@
-import Image from "next/image";
 import friends from "../../../public/friends.json";
 import FriendsCard from "../FriendsCard/page";
 

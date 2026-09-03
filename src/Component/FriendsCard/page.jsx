@@ -1,23 +1,25 @@
 import Image from "next/image";
+import Link from "next/link";
 
-const FriendsCard = ({friends}) => {
-    return (
-        <div className="mb-20">
-        <h2 className="text-2xl font-bold mb-4">Your Friends</h2>
+const FriendsCard = ({ friends }) => {
+  return (
+    <div className="mb-20">
+      <h2 className="text-2xl font-bold mb-4">Your Friends</h2>
 
-        {/* For each friend card */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {friends.map((friend) => {
-            const {
-              id,
-              name,
-              picture,
-              days_since_contact: days_ago,
-              status,
-              tags,
-            } = friend;
+      {/* For each friend card */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {friends.map((friend) => {
+          const {
+            id,
+            name,
+            picture,
+            days_since_contact: days_ago,
+            status,
+            tags,
+          } = friend;
 
-            return (
+          return (
+            <Link key={id} href={`/${id}`}>
               <div key={id} className="items-center justify-center">
                 <div className="rounded-lg w-full h-full bg-base-100 shadow-lg p-4 text-center border-2 border-[#E8E8E8]">
                   {/* Picture */}
@@ -56,11 +58,12 @@ const FriendsCard = ({friends}) => {
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </Link>
+          );
+        })}
       </div>
-    );
+    </div>
+  );
 };
 
 export default FriendsCard;
