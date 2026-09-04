@@ -21,7 +21,7 @@ const FriendsCard = ({ friends }) => {
           return (
             <Link key={id} href={`/${id}`}>
               <div key={id} className="items-center justify-center">
-                <div className="rounded-lg w-full h-full bg-base-100 shadow-lg p-4 text-center border-2 border-[#E8E8E8]">
+                <div className="rounded-lg w-full h-75 bg-base-100 shadow-lg p-4 text-center">
                   {/* Picture */}
                   <div className="relative mx-auto mb-4 h-20 w-20 overflow-hidden rounded-full">
                     <Image
@@ -43,7 +43,7 @@ const FriendsCard = ({ friends }) => {
                     {tags.map((tag, i) => (
                       <div
                         key={i}
-                        className="badge bg-[#CBFADB] text-[#244D3F] rounded-4xl truncate uppercase"
+                        className="badge p-3 bg-[#CBFADB] text-[#244D3F] rounded-4xl truncate uppercase"
                       >
                         {tag}
                       </div>
@@ -52,7 +52,7 @@ const FriendsCard = ({ friends }) => {
 
                   {/* Status */}
                   <div
-                    className={`my-2 text-white badge rounded-4xl capitalize ${status === "almost due" ? `bg-[#EFAD44] ` : status === "overdue" ? `bg-[#EF4444] ` : `bg-[#244D3F] `}`}
+                    className={`my-2 text-white badge p-3 rounded-4xl capitalize ${status === "almost due" ? `bg-[#EFAD44] ` : status === "overdue" ? `bg-[#EF4444] ` : `bg-[#244D3F] `}`}
                   >
                     {status.replace("-", " ")}
                   </div>
