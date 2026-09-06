@@ -1,6 +1,6 @@
 
 import friends from "../../../public/friends.json";
-import FriendsDetailPage from "./FriendsDetailPage";
+import FriendsDetailPage from "../../Component/FriendsDetailPage";
 
 
 const CardId = async ({ params }) => {
