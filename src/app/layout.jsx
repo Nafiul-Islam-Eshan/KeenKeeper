@@ -23,15 +23,15 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <FriendsContext>
-
           <NavbarPage />
 
-          {children}
+          <div className="flex flex-col flex-1 lg:px-[245] md:px-[150] px-6">
+            {children}
+          </div>
 
           <FooterPage />
 
           <ToastContainer />
-          
         </FriendsContext>
       </body>
     </html>

@@ -92,7 +92,7 @@ const FriendsDetailPage = ({ friend }) => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row gap-6 items-center justify-center lg:w-[70%] md:w-[85%] mx-auto  px-6 bg-[#F5FAFC] my-20">
+    <div className="flex flex-col lg:flex-row gap-6 items-center justify-center mx-auto my-20">
       {/* Left */}
       <div className="w-93 space-y-4 justify-center items-center">
         {/* Up */}
