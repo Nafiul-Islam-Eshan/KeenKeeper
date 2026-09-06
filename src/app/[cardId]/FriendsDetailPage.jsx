@@ -7,6 +7,7 @@ import { MdOutlineTextsms } from "react-icons/md";
 import Image from "next/image";
 import { useContext, useEffect } from "react";
 import { FriendContext } from "@/context/FriendsContext";
+import { toast, Zoom  } from "react-toastify";
 
 const FriendsDetailPage = ({ friend }) => {
   const { selectedFriend, setSelectedFriend } = useContext(FriendContext);
@@ -30,16 +31,24 @@ const FriendsDetailPage = ({ friend }) => {
     year: "numeric",
   }).format(new Date(next_due_date));
 
-
-
   const handleCall = () => {
     setSelectedFriend((prev) => [
       ...prev,
       {
         ...friend,
-        action: "call"
-      }
+        action: "call",
+      },
     ]);
+    toast.success(`Call with ${name}`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      theme: "light",
+      transition: Zoom,
+    });
   };
 
   const handleText = () => {
@@ -47,9 +56,19 @@ const FriendsDetailPage = ({ friend }) => {
       ...prev,
       {
         ...friend,
-        action: "text"
-      }
+        action: "text",
+      },
     ]);
+    toast.success(`Text with ${name}`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      theme: "light",
+      transition: Zoom,
+    });
   };
 
   const handleVideo = () => {
@@ -57,11 +76,20 @@ const FriendsDetailPage = ({ friend }) => {
       ...prev,
       {
         ...friend,
-        action: "video"
-      }
+        action: "video",
+      },
     ]);
+    toast.success(`Video with ${name}`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: false,
+      draggable: true,
+      theme: "light",
+      transition: Zoom,
+    });
   };
-  
 
   return (
     <div className="flex flex-col lg:flex-row gap-6 items-center justify-center lg:w-[70%] md:w-[85%] mx-auto  px-6 bg-[#F5FAFC] my-20">
@@ -136,15 +164,15 @@ const FriendsDetailPage = ({ friend }) => {
       <div className="flex flex-col justify-evenly h-full gap-6">
         {/* Stats cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center items-center ">
-          <div className=" bg-white rounded-lg shadow-md text-center p-6">
+          <div className=" bg-white rounded-lg shadow-md text-center h-25 p-6">
             <h1 className="text-2xl font-bold">{days_since_contact}</h1>
             <p className="opacity-50">Days Since Contact</p>
           </div>
-          <div className=" bg-white rounded-lg shadow-md text-center p-6">
+          <div className=" bg-white rounded-lg shadow-md text-center h-25 p-6">
             <h1 className="text-2xl font-bold">{goal}</h1>
             <p className="opacity-50">Goal (Days)</p>
           </div>
-          <div className=" bg-white rounded-lg shadow-md text-center p-6">
+          <div className=" bg-white rounded-lg shadow-md text-center h-25 p-2 flex flex-col justify-center">
             <h1 className="text-2xl font-bold">{formattedDate}</h1>
             <p className="opacity-50">Next Due</p>
           </div>
@@ -171,7 +199,7 @@ const FriendsDetailPage = ({ friend }) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Call */}
             <button
-              onClick={ handleCall }
+              onClick={handleCall}
               className=" bg-[#E9E9E9] w-45 h-30 mx-auto rounded-lg p-5 btn"
             >
               <div className="grid justify-center items-center gap-2">
@@ -181,7 +209,10 @@ const FriendsDetailPage = ({ friend }) => {
             </button>
 
             {/* Text */}
-            <button onClick={ handleText } className=" bg-[#E9E9E9] w-45 h-30 mx-auto rounded-lg p-5 btn">
+            <button
+              onClick={handleText}
+              className=" bg-[#E9E9E9] w-45 h-30 mx-auto rounded-lg p-5 btn"
+            >
               <div className="grid justify-center items-center gap-2">
                 <MdOutlineTextsms className="text-3xl mx-auto" />
                 <p className="">Text</p>
@@ -189,7 +220,10 @@ const FriendsDetailPage = ({ friend }) => {
             </button>
 
             {/* Video */}
-            <button onClick={ handleVideo } className=" bg-[#E9E9E9] w-45 h-30 mx-auto rounded-lg p-5 btn">
+            <button
+              onClick={handleVideo}
+              className=" bg-[#E9E9E9] w-45 h-30 mx-auto rounded-lg p-5 btn"
+            >
               <div className="grid justify-center items-center gap-2">
                 <FiVideo className="text-3xl mx-auto" />
                 <p className="">Video</p>
@@ -198,7 +232,9 @@ const FriendsDetailPage = ({ friend }) => {
           </div>
         </div>
       </div>
+
     </div>
+    
   );
 };
 

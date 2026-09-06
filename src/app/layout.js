@@ -3,6 +3,7 @@ import "./globals.css";
 import NavbarPage from "@/Component/navbar/page";
 import FooterPage from "@/Component/Footer/page";
 import FriendsContext from "@/context/FriendsContext";
+import { ToastContainer } from "react-toastify";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -22,9 +23,15 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <FriendsContext>
+
           <NavbarPage />
+
           {children}
+
           <FooterPage />
+
+          <ToastContainer />
+          
         </FriendsContext>
       </body>
     </html>
