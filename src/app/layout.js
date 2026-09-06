@@ -2,11 +2,11 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavbarPage from "@/Component/navbar/page";
 import FooterPage from "@/Component/Footer/page";
+import FriendsContext from "@/context/FriendsContext";
 
- 
 const geist = Geist({
-  subsets: ['latin'],
-})
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "KeenKeeper",
@@ -18,12 +18,14 @@ export default function RootLayout({ children }) {
     <html
       data-theme="corporate"
       lang="en"
-      className={ `${geist.className} h-full antialiased`}
+      className={`${geist.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
-        <NavbarPage />
-        {children}
-        <FooterPage />
+        <FriendsContext>
+          <NavbarPage />
+          {children}
+          <FooterPage />
+        </FriendsContext>
       </body>
     </html>
   );
