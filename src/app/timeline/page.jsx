@@ -1,7 +1,7 @@
 "use client";
 import { FriendContext } from "@/context/FriendsContext";
 import React, { useContext, useState } from "react";
-import SelectedFriendCard from "./SelectedFriendCard";
+import SelectedFriendCard from "../../Component/SelectedFriendCard";
 
 const TimelinePage = () => {
   const { selectedFriend, setSelectedFriend } = useContext(FriendContext);
