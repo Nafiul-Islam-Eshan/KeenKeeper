@@ -11,8 +11,7 @@ const TimelinePage = () => {
     action === ""
       ? selectedFriend
       : selectedFriend.filter((friend) => friend.action === action);
-
-  console.log(filteredFriends);
+    console.log(selectedFriend);
 
   return (
     <div className="my-20 space-y-6">
