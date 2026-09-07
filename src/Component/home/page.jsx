@@ -1,12 +1,16 @@
 import friends from "../../../public/friends.json";
+import FooterPage from "../Footer/page";
 import FriendsCard from "../FriendsCard/page";
+import NavbarPage from "../navbar/page";
 
 
 const HomePage = () => {
   return (
-    <div>
+    <>
+    <NavbarPage/>
+    <div className="flex flex-col flex-1 lg:px-[245] md:px-[150]">
       {/* banner section */}
-      <div className="flex flex-col py-5 gap-5">
+      <div className="flex flex-col px-6 py-5 gap-5">
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           Friends to keep close in your life
         </h1>
@@ -69,6 +73,8 @@ const HomePage = () => {
       {/* Friends cards */}
       <FriendsCard friends={friends} />
     </div>
+    <FooterPage/>
+    </>
   );
 };
 

@@ -1,7 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import NavbarPage from "@/Component/navbar/page";
-import FooterPage from "@/Component/Footer/page";
 import FriendsContext from "@/context/FriendsContext";
 import { ToastContainer } from "react-toastify";
 
@@ -23,13 +21,11 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col bg-[#F8FAFC]">
         <FriendsContext>
-          <NavbarPage />
 
-          <div className="flex flex-col flex-1 lg:px-[245] md:px-[150] px-6">
+          {/* <div className="flex flex-col flex-1 lg:px-[245] md:px-[150] px-6"> */}
             {children}
-          </div>
+          {/* </div> */}
 
-          <FooterPage />
 
           <ToastContainer />
         </FriendsContext>
